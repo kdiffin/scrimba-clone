@@ -14,7 +14,7 @@ function SiteWindow(props) {
   const [dragging, setDragging] = useState(false);
 
   const [diffY, setDiffY] = useState();
-  const [styles, setStyles] = useState({ left: 1404, top: 147 });
+  const [styles, setStyles] = useState({ left: "70%", top: 144 });
 
   function dragStart(e) {
     setDiffX(e.screenX - e.currentTarget.getBoundingClientRect().left);
@@ -68,7 +68,7 @@ function SiteWindow(props) {
         <span className="margin-right"></span>
 
         <input
-          className="white searchbar"
+          className={`white searchbar ${dragging ? "non-selectable" : null}`}
           defaultValue="/try to drag and resize me!"
         />
         <span className="margin-right-auto"></span>
@@ -78,7 +78,7 @@ function SiteWindow(props) {
       {props.showMushroom ? (
         <img
           src="https://cdn.dribbble.com/users/22930/screenshots/2789166/media/707fb43dc6e03b312b4cd369ef2b100d.gif"
-          className="container-img"
+          className={`container-img ${dragging ? "non-selectable" : null}`}
         />
       ) : (
         <div className="warning">

@@ -12,7 +12,7 @@
 
 .sitewindow-top {
   color: #6e7a82;
-
+  cursor: grab;
   box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
   display: flex;
   padding: 5px;
@@ -51,6 +51,7 @@
 
 .searchbar {
   width: 75%;
+
   margin-left: px;
   padding: 2px;
   font-size: 11px;
@@ -92,4 +93,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.non-selectable {
+  pointer-events: none;
+  user-select: none;
 }
