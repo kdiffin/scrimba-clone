@@ -1,0 +1,78 @@
+.TextEditor {
+  grid-row: span 3;
+  grid-column: 2 / -1;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  background-color: #212329;
+}
+
+.run-button {
+  background-color: hsl(142.13, 76.22%, 36.27%);
+  padding-right: 8.5px;
+  padding-left: 8.5px;
+
+  margin-left: auto;
+}
+
+.preview-button {
+  background-color: hsla(215.29, 25%, 26.67%, 100%);
+}
+
+.console-button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: hsla(215.29, 25%, 26.67%, 50%);
+}
+.texteditor__top {
+  display: flex;
+  align-items: center;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.texteditor-container {
+  background: transparent;
+  border: none;
+  margin-top: 10px;
+  color: #d4d4d4;
+  outline: none;
+  overflow-y: scroll;
+  height: 90%;
+  font-size: 14px;
+
+  width: 100%;
+}
+
+.texteditor-container::-webkit-scrollbar {
+  width: 6px;
+  overscroll-behavior-y: none;
+}
+
+.texteditor-container::-webkit-scrollbar-track {
+  border-radius: 100vh;
+
+  height: 5px;
+  background-color: #212329;
+}
+
+.texteditor-container::-webkit-scrollbar-thumb {
+  background-color: #35373b;
+
+  border-radius: 100vh;
+  height: 20px;
+}
+
+.texteditor-type {
+  background: transparent;
+  color: #d4d4d4;
+  outline: none;
+  position: relative;
+
+  overflow: hidden;
+  min-height: 100%;
+  width: 60%;
+}

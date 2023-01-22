@@ -1,0 +1,46 @@
+.videobar {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  padding: 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.418) 1%,
+    rgba(0, 0, 0, 0.329) 10%,
+
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding-left: 20px;
+  padding-right: 15px;
+
+  align-items: center;
+}
+
+.playIcon:active {
+  transform: scale(0.9);
+}
+
+.bar {
+  width: 88%;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  height: 2px;
+  background-color: #2d3748;
+}
+
+.videobar__stats {
+  color: #6e7a82;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.videobar__stats > :not(p) {
+  cursor: pointer;
+}
+
+.videobar__stats > :not(p):active {
+  transform: scale(0.8);
+}
