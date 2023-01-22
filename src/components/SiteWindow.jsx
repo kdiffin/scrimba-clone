@@ -14,7 +14,7 @@ function SiteWindow(props) {
   const [dragging, setDragging] = useState(false);
 
   const [diffY, setDiffY] = useState();
-  const [styles, setStyles] = useState({ left: 1204, top: 147 });
+  const [styles, setStyles] = useState({ left: 1404, top: 147 });
 
   function dragStart(e) {
     setDiffX(e.screenX - e.currentTarget.getBoundingClientRect().left);
