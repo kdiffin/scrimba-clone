@@ -7,7 +7,6 @@ import Videobar from "./components/Videobar";
 
 function App() {
   const [showSiteWindow, setShowSiteWindow] = useState(true);
-  const [showMushroom, setShowMushroom] = useState(true);
 
   return (
     <div className="App">
@@ -21,8 +20,6 @@ function App() {
       <SiteWindow
         showSiteWindow={showSiteWindow}
         setShowSiteWindow={setShowSiteWindow}
-        showMushroom={showMushroom}
-        setShowMushroom={setShowMushroom}
       />
     </div>
   );

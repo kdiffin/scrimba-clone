@@ -1,7 +1,9 @@
-import React from "react";
+import React, { memo, useState } from "react";
+import { SiDiscord, SiGithub } from "react-icons/si";
 import "../css-files/Navbar.css";
 
 function Navbar() {
+  const [showSocials, setShowSocials] = useState(false);
   return (
     <div className="Navbar">
       <svg
@@ -81,13 +83,42 @@ function Navbar() {
 
       <div className="navbar__right">
         <img
+          onClick={() => setShowSocials((prevSocials) => !prevSocials)}
           src="https://cdn.discordapp.com/avatars/593007920417996821/8a15c6ec8f099ad078e0c2743b705acc.webp?size=128"
           alt="me"
           className="img_avatar"
         />
       </div>
+      <div
+        className={`socials smooth-transition ${
+          showSocials && "opacity-transition"
+        }`}
+      >
+        <div className="flex">
+          Github:{" "}
+          <a
+            target="_blank"
+            href="https:github.com/diffim"
+            rel="noopener"
+            className="socials__icon"
+          >
+            <SiGithub />
+          </a>
+        </div>
+        <div className="flex">
+          Discord:{" "}
+          <a
+            target="_blank"
+            href="https://discordapp.com/users/593007920417996821"
+            rel="noopener"
+            className="socials__icon"
+          >
+            <SiDiscord />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Navbar;
+export default memo(Navbar);

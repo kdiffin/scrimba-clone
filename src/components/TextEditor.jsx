@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import "../css-files/TextEditor.css";
 function TextEditor(props) {
@@ -29,4 +29,4 @@ function TextEditor(props) {
   );
 }
 
-export default TextEditor;
+export default memo(TextEditor);

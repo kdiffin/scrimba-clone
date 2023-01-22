@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FaReact } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
 
@@ -99,4 +99,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default memo(Sidebar);

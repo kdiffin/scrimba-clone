@@ -8,35 +8,11 @@ import {
 } from "react-icons/bs";
 import { SlRefresh } from "react-icons/sl";
 import "../css-files/SiteWindow.css";
+import useDrag from "../custom hooks/useDrag";
 
 function SiteWindow(props) {
-  const [diffX, setDiffX] = useState();
-  const [dragging, setDragging] = useState(false);
-
-  const [diffY, setDiffY] = useState();
-  const [styles, setStyles] = useState({ left: "70%", top: 144 });
-
-  function dragStart(e) {
-    setDiffX(e.screenX - e.currentTarget.getBoundingClientRect().left);
-    setDiffY(e.screenY - e.currentTarget.getBoundingClientRect().top);
-    setDragging(true);
-  }
-
-  function draggingFunc(e) {
-    if (dragging) {
-      var left = e.screenX - diffX;
-      var top = e.screenY - diffY;
-
-      setStyles({
-        left: left,
-        top: top,
-      });
-    }
-  }
-
-  function dragEnd() {
-    setDragging(false);
-  }
+  const [showMushroom, setShowMushroom] = useState(true);
+  const [dragStart, draggingFunc, dragEnd, styles, dragging] = useDrag();
 
   return props.showSiteWindow ? (
     <div className="sitewindow" style={styles}>
@@ -53,11 +29,11 @@ function SiteWindow(props) {
         ></div>
         <div
           className="circle yellowbg"
-          onClick={() => props.setShowMushroom(false)}
+          onClick={() => setShowMushroom(false)}
         ></div>
         <div
           className="circle greenbg"
-          onClick={() => props.setShowMushroom(true)}
+          onClick={() => setShowMushroom(true)}
         ></div>
 
         <BsArrowLeftShort size={24} />
@@ -75,7 +51,7 @@ function SiteWindow(props) {
 
         <BiDotsVerticalRounded />
       </div>
-      {props.showMushroom ? (
+      {showMushroom ? (
         <img
           src="https://cdn.dribbble.com/users/22930/screenshots/2789166/media/707fb43dc6e03b312b4cd369ef2b100d.gif"
           className={`container-img ${dragging ? "non-selectable" : null}`}

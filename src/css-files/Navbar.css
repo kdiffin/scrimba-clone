@@ -1,7 +1,7 @@
 .Navbar {
   grid-column: 1 / -1;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
-
+  position: relative;
   display: flex;
   align-items: center;
   padding-right: 11px;
@@ -72,4 +72,26 @@
 
 .img_avatar:active {
   transform: scale(0.9);
+}
+
+.socials {
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #5f6c7eee;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+
+  z-index: 10;
+
+  top: 50px;
+}
+
+.socials__icon {
+  padding-top: 6px;
 }

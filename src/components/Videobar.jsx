@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BsFillPlayFill, BsBookmark } from "react-icons/bs";
 import { BiDotsHorizontalRounded, BiCog } from "react-icons/bi";
 import { SlMenu } from "react-icons/sl";
@@ -20,4 +20,4 @@ function Videobar() {
   );
 }
 
-export default Videobar;
+export default memo(Videobar);
